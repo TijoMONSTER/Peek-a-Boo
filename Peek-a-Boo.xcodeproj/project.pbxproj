@@ -22,6 +22,10 @@
 		2C4BD57C199E6C4000D0DA71 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4BD560199E6C4000D0DA71 /* CoreData.framework */; };
 		2C4BD584199E6C4000D0DA71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C4BD582199E6C4000D0DA71 /* InfoPlist.strings */; };
 		2C4BD586199E6C4000D0DA71 /* Peek_a_BooTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4BD585199E6C4000D0DA71 /* Peek_a_BooTests.m */; };
+		2C4BD5A3199E779100D0DA71 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4BD5A2199E779100D0DA71 /* User.m */; };
+		2C4BD5A6199E779200D0DA71 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4BD5A5199E779200D0DA71 /* Photo.m */; };
+		2C4BD5A8199E77D300D0DA71 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4BD5A7199E77D300D0DA71 /* MainStoryboard.storyboard */; };
+		2C4BD5AB199E781800D0DA71 /* UsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4BD5AA199E781800D0DA71 /* UsersViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,13 @@
 		2C4BD581199E6C4000D0DA71 /* Peek-a-BooTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Peek-a-BooTests-Info.plist"; sourceTree = "<group>"; };
 		2C4BD583199E6C4000D0DA71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C4BD585199E6C4000D0DA71 /* Peek_a_BooTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Peek_a_BooTests.m; sourceTree = "<group>"; };
+		2C4BD5A1199E779100D0DA71 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		2C4BD5A2199E779100D0DA71 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		2C4BD5A4199E779200D0DA71 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		2C4BD5A5199E779200D0DA71 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		2C4BD5A7199E77D300D0DA71 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		2C4BD5A9199E781800D0DA71 /* UsersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersViewController.h; sourceTree = "<group>"; };
+		2C4BD5AA199E781800D0DA71 /* UsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +126,17 @@
 		2C4BD562199E6C4000D0DA71 /* Peek-a-Boo */ = {
 			isa = PBXGroup;
 			children = (
+				2C4BD5A9199E781800D0DA71 /* UsersViewController.h */,
+				2C4BD5AA199E781800D0DA71 /* UsersViewController.m */,
 				2C4BD56B199E6C4000D0DA71 /* AppDelegate.h */,
 				2C4BD56C199E6C4000D0DA71 /* AppDelegate.m */,
 				2C4BD571199E6C4000D0DA71 /* Images.xcassets */,
 				2C4BD56E199E6C4000D0DA71 /* Peek_a_Boo.xcdatamodeld */,
+				2C4BD5A4199E779200D0DA71 /* Photo.h */,
+				2C4BD5A5199E779200D0DA71 /* Photo.m */,
+				2C4BD5A1199E779100D0DA71 /* User.h */,
+				2C4BD5A2199E779100D0DA71 /* User.m */,
+				2C4BD5A7199E77D300D0DA71 /* MainStoryboard.storyboard */,
 				2C4BD563199E6C4000D0DA71 /* Supporting Files */,
 			);
 			path = "Peek-a-Boo";
@@ -228,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C4BD5A8199E77D300D0DA71 /* MainStoryboard.storyboard in Resources */,
 				2C4BD567199E6C4000D0DA71 /* InfoPlist.strings in Resources */,
 				2C4BD572199E6C4000D0DA71 /* Images.xcassets in Resources */,
 			);
@@ -248,8 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C4BD5A3199E779100D0DA71 /* User.m in Sources */,
 				2C4BD56D199E6C4000D0DA71 /* AppDelegate.m in Sources */,
 				2C4BD569199E6C4000D0DA71 /* main.m in Sources */,
+				2C4BD5AB199E781800D0DA71 /* UsersViewController.m in Sources */,
+				2C4BD5A6199E779200D0DA71 /* Photo.m in Sources */,
 				2C4BD570199E6C4000D0DA71 /* Peek_a_Boo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
