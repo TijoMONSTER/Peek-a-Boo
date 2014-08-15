@@ -14,6 +14,9 @@
 @interface User : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * phone;
+@property (nonatomic, retain) NSString * address;
+@property (nonatomic, retain) NSString * email;
 @property (nonatomic, retain) NSSet *photos;
 @end
 

@@ -5,11 +5,14 @@
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="photos" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photo" inverseName="user" inverseEntity="Photo" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-54" positionY="-9" width="128" height="73"/>
+        <element name="User" positionX="-54" positionY="-9" width="128" height="118"/>
         <element name="Photo" positionX="-36" positionY="18" width="128" height="73"/>
     </elements>
 </model>

@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Users View Controller-->
+        <!--Users View Controller - Users-->
         <scene sceneID="EB6-yp-i2v">
             <objects>
                 <viewController id="9dF-kX-Xpc" customClass="UsersViewController" sceneMemberID="viewController">
@@ -13,12 +13,13 @@
                         <viewControllerLayoutGuide type="bottom" id="Fy6-z9-5dr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ysQ-lo-LOt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SfG-Jg-fNP">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="r7o-RG-nTk">
                                     <size key="itemSize" width="120" height="120"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -45,11 +46,100 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="bTH-DO-3c2"/>
+                    <navigationItem key="navigationItem" title="Users" id="bTH-DO-3c2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DOP-ae-8cf">
+                            <connections>
+                                <segue destination="WvY-79-2oN" kind="push" id="T2o-gj-xPm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eB8-pe-2BI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="971" y="162"/>
+        </scene>
+        <!--Add User View Controller - Add User-->
+        <scene sceneID="Ra9-lW-ZXF">
+            <objects>
+                <viewController id="WvY-79-2oN" customClass="AddUserViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="10T-bI-tCb"/>
+                        <viewControllerLayoutGuide type="bottom" id="vem-kD-nYq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vLg-eg-DDS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="r4Y-DK-y5o">
+                                <rect key="frame" x="20" y="85" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDidEndOnExit:" destination="WvY-79-2oN" eventType="editingDidEndOnExit" id="tAO-Hh-dQ1"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GAV-Hx-ry9">
+                                <rect key="frame" x="20" y="199" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="textFieldDidEndOnExit:" destination="WvY-79-2oN" eventType="editingDidEndOnExit" id="3dG-1d-ZW6"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AEn-1j-eMo">
+                                <rect key="frame" x="20" y="161" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDidEndOnExit:" destination="WvY-79-2oN" eventType="editingDidEndOnExit" id="CVK-ZT-g28"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="g8Z-VE-Ftn">
+                                <rect key="frame" x="20" y="123" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <connections>
+                                    <action selector="textFieldDidEndOnExit:" destination="WvY-79-2oN" eventType="editingDidEndOnExit" id="W07-2e-3Y5"/>
+                                </connections>
+                            </textField>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="picture" translatesAutoresizingMaskIntoConstraints="NO" id="v19-2w-d9V">
+                                <rect key="frame" x="105" y="237" width="110" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="cUS-PQ-li6" appends="YES" id="rJJ-4W-joL"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add User" id="thN-r9-TUs">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7bH-8h-Jgy">
+                            <connections>
+                                <action selector="onDoneButtonTapped:" destination="WvY-79-2oN" id="ckG-F7-YGo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addressTextField" destination="AEn-1j-eMo" id="XtL-hx-uQG"/>
+                        <outlet property="emailTextField" destination="GAV-Hx-ry9" id="dKy-Hc-47S"/>
+                        <outlet property="imageView" destination="v19-2w-d9V" id="r6g-9D-d3H"/>
+                        <outlet property="nameTextField" destination="r4Y-DK-y5o" id="bzT-3s-yrk"/>
+                        <outlet property="phoneTextField" destination="g8Z-VE-Ftn" id="LSX-2G-p2X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cvP-xd-E7y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cUS-PQ-li6">
+                    <connections>
+                        <action selector="onImageTapped:" destination="WvY-79-2oN" id="DKZ-UF-TXy"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1513" y="-524"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rbm-2r-qUf">
@@ -70,9 +160,12 @@
             <point key="canvasLocation" x="451" y="162"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="picture" width="64" height="64"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

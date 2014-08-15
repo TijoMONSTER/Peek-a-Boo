@@ -13,6 +13,9 @@
 @implementation User
 
 @dynamic name;
+@dynamic phone;
+@dynamic address;
+@dynamic email;
 @dynamic photos;
 
 @end
