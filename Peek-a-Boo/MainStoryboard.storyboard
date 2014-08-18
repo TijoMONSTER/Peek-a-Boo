@@ -239,12 +239,27 @@
                                 </connections>
                             </textField>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="picture" translatesAutoresizingMaskIntoConstraints="NO" id="v19-2w-d9V">
-                                <rect key="frame" x="105" y="237" width="110" height="110"/>
+                                <rect key="frame" x="20" y="237" width="110" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="cUS-PQ-li6" appends="YES" id="rJJ-4W-joL"/>
                                 </connections>
+                            </imageView>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="picture" translatesAutoresizingMaskIntoConstraints="NO" id="avf-8g-jqK">
+                                <rect key="frame" x="190" y="237" width="110" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="picture" translatesAutoresizingMaskIntoConstraints="NO" id="XiC-hF-3tD">
+                                <rect key="frame" x="20" y="350" width="110" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="picture" translatesAutoresizingMaskIntoConstraints="NO" id="nbd-t0-IAA">
+                                <rect key="frame" x="190" y="350" width="110" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -259,7 +274,6 @@
                     <connections>
                         <outlet property="addressTextField" destination="AEn-1j-eMo" id="XtL-hx-uQG"/>
                         <outlet property="emailTextField" destination="GAV-Hx-ry9" id="dKy-Hc-47S"/>
-                        <outlet property="imageView" destination="v19-2w-d9V" id="r6g-9D-d3H"/>
                         <outlet property="nameTextField" destination="r4Y-DK-y5o" id="bzT-3s-yrk"/>
                         <outlet property="phoneTextField" destination="g8Z-VE-Ftn" id="LSX-2G-p2X"/>
                     </connections>
