@@ -30,6 +30,15 @@
 	[geocoder geocodeAddressString:self.user.address
 				 completionHandler:^(NSArray *placemarks, NSError *error) {
 					 if (placemarks.count > 0) {
+						 CLPlacemark *placemark = placemarks[0];
+						 CLCircularRegion *region = (CLCircularRegion *)placemark.region;
+
+						 [self.mapView setRegion:MKCoordinateRegionMakeWithDistance(placemark.location.coordinate, region.radius, region.radius)];
+
+						 MKPointAnnotation *annotation = [MKPointAnnotation new];
+						 annotation.coordinate = placemark.location.coordinate;
+						 annotation.title = self.user.address;
+						 [self.mapView addAnnotation:annotation];
 
 					 } else {
 						 UIAlertView *alertView = [UIAlertView new];
@@ -46,6 +55,15 @@
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
 	[self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - MKMapViewDelegate
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+	MKPinAnnotationView *pin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil];
+	pin.canShowCallout = YES;
+	return pin;
 }
 
 @end
