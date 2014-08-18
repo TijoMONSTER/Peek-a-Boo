@@ -29,6 +29,8 @@
 		2C4BD5D819A1966C00D0DA71 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4BD5D719A1966C00D0DA71 /* User.m */; };
 		2C4BD5DB19A1966D00D0DA71 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4BD5DA19A1966D00D0DA71 /* Photo.m */; };
 		2C4BD5DE19A19F4A00D0DA71 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4BD5DD19A19F4A00D0DA71 /* PhotosViewController.m */; };
+		2C4BD63C19A2A7C800D0DA71 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4BD63B19A2A7C800D0DA71 /* MapViewController.m */; };
+		2C4BD63E19A2A7EE00D0DA71 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4BD63D19A2A7EE00D0DA71 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,9 @@
 		2C4BD5DA19A1966D00D0DA71 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		2C4BD5DC19A19F4A00D0DA71 /* PhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosViewController.h; sourceTree = "<group>"; };
 		2C4BD5DD19A19F4A00D0DA71 /* PhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
+		2C4BD63A19A2A7C800D0DA71 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		2C4BD63B19A2A7C800D0DA71 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		2C4BD63D19A2A7EE00D0DA71 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C4BD63E19A2A7EE00D0DA71 /* MapKit.framework in Frameworks */,
 				2C4BD55D199E6C4000D0DA71 /* CoreGraphics.framework in Frameworks */,
 				2C4BD561199E6C4000D0DA71 /* CoreData.framework in Frameworks */,
 				2C4BD55F199E6C4000D0DA71 /* UIKit.framework in Frameworks */,
@@ -123,6 +129,7 @@
 		2C4BD559199E6C4000D0DA71 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C4BD63D19A2A7EE00D0DA71 /* MapKit.framework */,
 				2C4BD55A199E6C4000D0DA71 /* Foundation.framework */,
 				2C4BD55C199E6C4000D0DA71 /* CoreGraphics.framework */,
 				2C4BD55E199E6C4000D0DA71 /* UIKit.framework */,
@@ -152,6 +159,8 @@
 				2C4BD5A7199E77D300D0DA71 /* MainStoryboard.storyboard */,
 				2C4BD5AC199E807D00D0DA71 /* AddUserViewController.h */,
 				2C4BD5AD199E807D00D0DA71 /* AddUserViewController.m */,
+				2C4BD63A19A2A7C800D0DA71 /* MapViewController.h */,
+				2C4BD63B19A2A7C800D0DA71 /* MapViewController.m */,
 				2C4BD563199E6C4000D0DA71 /* Supporting Files */,
 			);
 			path = "Peek-a-Boo";
@@ -289,6 +298,7 @@
 				2C4BD5DB19A1966D00D0DA71 /* Photo.m in Sources */,
 				2C4BD5AB199E781800D0DA71 /* UsersViewController.m in Sources */,
 				2C4BD5AE199E807D00D0DA71 /* AddUserViewController.m in Sources */,
+				2C4BD63C19A2A7C800D0DA71 /* MapViewController.m in Sources */,
 				2C4BD5DE19A19F4A00D0DA71 /* PhotosViewController.m in Sources */,
 				2C4BD570199E6C4000D0DA71 /* Peek_a_Boo.xcdatamodeld in Sources */,
 			);

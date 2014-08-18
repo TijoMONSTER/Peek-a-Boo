@@ -83,6 +83,34 @@
             </objects>
             <point key="canvasLocation" x="971" y="162"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="IkA-oz-YXn">
+            <objects>
+                <viewController id="Cbg-43-qa8" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="APc-St-Lh5"/>
+                        <viewControllerLayoutGuide type="bottom" id="DdE-Ik-nIJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vMb-yV-tQy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AQ1-TR-lx0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OFi-0p-lU3"/>
+                    <connections>
+                        <outlet property="mapView" destination="AQ1-TR-lx0" id="cyx-zM-JCN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RZC-z2-awr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1961" y="162"/>
+        </scene>
         <!--Photos View Controller-->
         <scene sceneID="zyD-DD-91S">
             <objects>
@@ -222,7 +250,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="onLocationButtonTapped:" destination="Utl-L9-0Fj" eventType="touchUpInside" id="m1Q-PD-KS2"/>
+                                            <segue destination="Cbg-43-qa8" kind="push" identifier="showAddressSegue" id="HLS-pY-uul"/>
                                         </connections>
                                     </button>
                                 </subviews>

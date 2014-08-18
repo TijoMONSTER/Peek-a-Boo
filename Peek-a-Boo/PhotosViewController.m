@@ -135,11 +135,6 @@
 	[sender resignFirstResponder];
 }
 
-- (IBAction)onLocationButtonTapped:(UIButton *)sender
-{
-	NSLog(@"location button tapped");
-}
-
 #pragma mark - UIImagePickerController delegate methods
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
@@ -174,6 +169,15 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
 	[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	if ([segue.identifier isEqualToString:@"showAddressSegue"]) {
+		
+	}
 }
 
 #pragma mark - Helper methods
