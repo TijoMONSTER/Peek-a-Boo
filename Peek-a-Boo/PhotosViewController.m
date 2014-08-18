@@ -135,6 +135,11 @@
 	[sender resignFirstResponder];
 }
 
+- (IBAction)onLocationButtonTapped:(UIButton *)sender
+{
+	NSLog(@"location button tapped");
+}
+
 #pragma mark - UIImagePickerController delegate methods
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
