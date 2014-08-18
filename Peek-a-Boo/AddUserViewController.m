@@ -19,10 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (weak, nonatomic) IBOutlet UITextField *addressTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView1;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView2;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView3;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView4;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @property BOOL photoWasSet;
 @property UIImage *selectedImage;
