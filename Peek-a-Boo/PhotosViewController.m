@@ -26,10 +26,11 @@
 
 	for (Photo *photo in self.photos) {
 		UIImageView *imageView = [[UIImageView alloc] initWithImage:[self imageWithFileName:photo.fileName]];
-		[self.scrollView addSubview:imageView];
 		imageView.frame = CGRectMake(width, 0, self.view.frame.size.width, self.view.frame.size.height);
 		imageView.contentMode = UIViewContentModeScaleAspectFit;
 		width += imageView.frame.size.width;
+
+		[self.scrollView addSubview:imageView];
 	}
 
 	self.scrollView.contentSize = CGSizeMake(width, self.scrollView.frame.size.height);
@@ -41,7 +42,6 @@
 	NSData *data = [NSData dataWithContentsOfURL:imageURL];
 	return [UIImage imageWithData:data];
 }
-
 
 #pragma mark - Helper methods
 
