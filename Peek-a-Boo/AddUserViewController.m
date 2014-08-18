@@ -75,12 +75,10 @@
 		[newUser addPhotosObject:newPhoto];
 		// save context
 		[self saveContext];
-
-		[self.navigationController popViewControllerAnimated:YES];
 	}
 }
 
-- (IBAction)onImageTapped:(UITapGestureRecognizer *)tapGestureRecognizer
+- (IBAction)onImageViewTapped:(UITapGestureRecognizer *)tapGestureRecognizer
 {
 	UIImagePickerController *imagePicker = [UIImagePickerController new];
 	imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -117,7 +115,7 @@
 
 - (void)saveContext
 {
-	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 		NSError *saveError;
 		[[self managedObjectContext] save:&saveError];
 
@@ -127,7 +125,11 @@
 		} else {
 			NSLog(@"context saved");
 		}
-	});
+
+		[self.navigationController popViewControllerAnimated:YES];
+		// reload users collectionView
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"AddedUserNotification" object:nil];
+//	});
 }
 
 - (AppDelegate *)appDelegate

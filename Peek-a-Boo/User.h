@@ -2,7 +2,7 @@
 //  User.h
 //  Peek-a-Boo
 //
-//  Created by Iván Mervich on 8/15/14.
+//  Created by Iván Mervich on 8/17/14.
 //  Copyright (c) 2014 Mobile Makers. All rights reserved.
 //
 
@@ -13,10 +13,10 @@
 
 @interface User : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSString * phone;
 @property (nonatomic, retain) NSString * address;
 @property (nonatomic, retain) NSString * email;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * phone;
 @property (nonatomic, retain) NSSet *photos;
 @end
 
