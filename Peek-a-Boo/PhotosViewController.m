@@ -14,6 +14,11 @@
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+
 @end
 
 @implementation PhotosViewController
@@ -24,7 +29,7 @@
 
 	CGFloat width = 0.0;
 
-	for (Photo *photo in self.photos) {
+	for (Photo *photo in self.user.photos.allObjects) {
 		UIImageView *imageView = [[UIImageView alloc] initWithImage:[self imageWithFileName:photo.fileName]];
 		imageView.frame = CGRectMake(width, 0, self.view.frame.size.width, self.view.frame.size.height);
 		imageView.contentMode = UIViewContentModeScaleAspectFit;
@@ -34,6 +39,11 @@
 	}
 
 	self.scrollView.contentSize = CGSizeMake(width, self.scrollView.frame.size.height);
+
+	self.nameLabel.text = self.user.name;
+	self.phoneLabel.text = self.user.phone;
+	self.addressLabel.text = self.user.address;
+	self.emailLabel.text = self.user.email;
 }
 
 - (UIImage *)imageWithFileName:(NSString *)fileName

@@ -65,7 +65,7 @@
 		User *selectedUser = [self.fetchedResultsController objectAtIndexPath:selectedCellIndexPath];
 
 		PhotosViewController *photosVC = segue.destinationViewController;
-		photosVC.photos = selectedUser.photos.allObjects;
+		photosVC.user = selectedUser;
 	}
 }
 

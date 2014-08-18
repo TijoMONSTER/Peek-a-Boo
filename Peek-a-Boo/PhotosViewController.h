@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 @interface PhotosViewController : UIViewController
 
-@property NSArray *photos;
+@property User *user;
 
 @end
