@@ -28,6 +28,7 @@
 		2C4BD5C319A186AE00D0DA71 /* UserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4BD5C219A186AE00D0DA71 /* UserCollectionViewCell.m */; };
 		2C4BD5D819A1966C00D0DA71 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4BD5D719A1966C00D0DA71 /* User.m */; };
 		2C4BD5DB19A1966D00D0DA71 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4BD5DA19A1966D00D0DA71 /* Photo.m */; };
+		2C4BD5DE19A19F4A00D0DA71 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4BD5DD19A19F4A00D0DA71 /* PhotosViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		2C4BD5D719A1966C00D0DA71 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		2C4BD5D919A1966D00D0DA71 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		2C4BD5DA19A1966D00D0DA71 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		2C4BD5DC19A19F4A00D0DA71 /* PhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosViewController.h; sourceTree = "<group>"; };
+		2C4BD5DD19A19F4A00D0DA71 /* PhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 				2C4BD5C219A186AE00D0DA71 /* UserCollectionViewCell.m */,
 				2C4BD56B199E6C4000D0DA71 /* AppDelegate.h */,
 				2C4BD56C199E6C4000D0DA71 /* AppDelegate.m */,
+				2C4BD5DC19A19F4A00D0DA71 /* PhotosViewController.h */,
+				2C4BD5DD19A19F4A00D0DA71 /* PhotosViewController.m */,
 				2C4BD571199E6C4000D0DA71 /* Images.xcassets */,
 				2C4BD56E199E6C4000D0DA71 /* Peek_a_Boo.xcdatamodeld */,
 				2C4BD5A7199E77D300D0DA71 /* MainStoryboard.storyboard */,
@@ -284,6 +289,7 @@
 				2C4BD5DB19A1966D00D0DA71 /* Photo.m in Sources */,
 				2C4BD5AB199E781800D0DA71 /* UsersViewController.m in Sources */,
 				2C4BD5AE199E807D00D0DA71 /* AddUserViewController.m in Sources */,
+				2C4BD5DE19A19F4A00D0DA71 /* PhotosViewController.m in Sources */,
 				2C4BD570199E6C4000D0DA71 /* Peek_a_Boo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -25,15 +25,15 @@
 	Photo *firstPhoto = userPhotos.firstObject;
 
 	if (firstPhoto) {
-		[self showActivityIndicator];
+		//		[self showActivityIndicator];
 
-//		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-			NSURL *imageURL = [[self appDelegate].applicationDocumentsDirectory URLByAppendingPathComponent:firstPhoto.fileName];
-			NSData *data = [NSData dataWithContentsOfURL:imageURL];
-			UIImage *image = [UIImage imageWithData:data];
-			self.imageView.image = image;
-			[self hideActivityIndicator];
-//		});
+		//		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+		NSURL *imageURL = [[self appDelegate].applicationDocumentsDirectory URLByAppendingPathComponent:firstPhoto.fileName];
+		NSData *data = [NSData dataWithContentsOfURL:imageURL];
+		UIImage *image = [UIImage imageWithData:data];
+		self.imageView.image = image;
+		//			[self hideActivityIndicator];
+		//		});
 	}
 }
 

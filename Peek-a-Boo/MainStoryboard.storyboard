@@ -50,6 +50,7 @@
                                         <connections>
                                             <outlet property="activityIndicator" destination="bLZ-i4-EkE" id="6gS-qt-LrL"/>
                                             <outlet property="imageView" destination="FAb-Fa-uTy" id="dZ6-du-FHQ"/>
+                                            <segue destination="Utl-L9-0Fj" kind="push" identifier="showFullscreenImageSegue" id="g7r-Co-uSy"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -75,6 +76,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eB8-pe-2BI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="971" y="162"/>
+        </scene>
+        <!--Photos View Controller-->
+        <scene sceneID="zyD-DD-91S">
+            <objects>
+                <viewController id="Utl-L9-0Fj" customClass="PhotosViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uom-eO-vog"/>
+                        <viewControllerLayoutGuide type="bottom" id="717-82-qtw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q15-Iq-6Rb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BUG-PA-7MS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="n3G-Tv-tcy"/>
+                    <connections>
+                        <outlet property="scrollView" destination="BUG-PA-7MS" id="j5S-6Y-AqI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fsm-N1-5gX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1513" y="162"/>
         </scene>
         <!--Add User View Controller - Add User-->
         <scene sceneID="Ra9-lW-ZXF">

@@ -11,6 +11,7 @@
 #import "User.h"
 #import "Photo.h"
 #import "UserCollectionViewCell.h"
+#import "PhotosViewController.h"
 
 @interface UsersViewController () <UICollectionViewDataSource>
 
@@ -53,6 +54,19 @@
 	[cell loadFirstUserImage];
 
 	return cell;
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	if ([segue.identifier isEqualToString:@"showFullscreenImageSegue"]) {
+		NSIndexPath *selectedCellIndexPath = self.collectionView.indexPathsForSelectedItems[0];
+		User *selectedUser = [self.fetchedResultsController objectAtIndexPath:selectedCellIndexPath];
+
+		PhotosViewController *photosVC = segue.destinationViewController;
+		photosVC.photos = selectedUser.photos.allObjects;
+	}
 }
 
 #pragma mark - Notifications
