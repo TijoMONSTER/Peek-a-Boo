@@ -9,6 +9,7 @@
 #import "PhotosViewController.h"
 #import "Photo.h"
 #import "AppDelegate.h"
+#import "MapViewController.h"
 
 @interface PhotosViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -176,7 +177,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
 	if ([segue.identifier isEqualToString:@"showAddressSegue"]) {
-		
+		MapViewController *mapVC = segue.destinationViewController;
+		mapVC.user = self.user;
 	}
 }
 
